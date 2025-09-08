@@ -17,8 +17,9 @@ public class UserConsumer {
 
     @KafkaListener(topics = "${app.topic.user-create}", groupId = "user-group")
     public void consume(UserMessage userMessage) {
-        User user = new User(userMessage.firstName(), userMessage.lastName());
+        User user = new User(userMessage.firstName(), userMessage.lastName(), userMessage.email());
         userRepository.save(user);
-        System.out.println("Пользователь сохранен в БД: " + user.getFirstName() + " " + user.getLastName());
+        System.out.println("Пользователь сохранен в БД: " + user.getFirstName() + " " + user.getLastName()
+                + " " + user.getEmail());
     }
 }

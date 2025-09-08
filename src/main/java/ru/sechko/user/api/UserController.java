@@ -25,7 +25,8 @@ public class UserController {
     @PostMapping
     public ResponseEntity<Void> createUser(@Validated @RequestBody UserCreateRequest userCreateRequest) {
         var msg = new UserMessage(userCreateRequest.firstName(),
-                                  userCreateRequest.lastName()
+                                  userCreateRequest.lastName(),
+                                  userCreateRequest. email()
         );
 
 
