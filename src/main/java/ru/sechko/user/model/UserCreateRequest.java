@@ -1,4 +1,4 @@
-package ru.sechko.user.api;
+package ru.sechko.user.model;
 
 import jakarta.validation.constraints.NotBlank;
 

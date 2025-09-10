@@ -2,8 +2,8 @@ package ru.sechko.user.service;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-import ru.sechko.user.api.UserMessage;
 import ru.sechko.user.model.User;
+import ru.sechko.user.model.UserMessage;
 import ru.sechko.user.repository.UserRepository;
 
 @Service
